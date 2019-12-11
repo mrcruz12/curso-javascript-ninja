@@ -58,26 +58,28 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
 */
 function calculator(operador) {
     return function (x, y) {
+        var result;
         switch (operador) {
+            
             case '+':
-                return (x + y)
+                result = (x + y)
                 break;
             case '-':
-                return (x - y)
+                result = (x - y)
                 break;
             case '*':
-                return (x * y)
+                result = (x * y)
                 break;
             case '/':
-                return (x / y)
+                result =(x / y)
                 break;
             case '%':
-                return (x % y)
+                result = (x % y)
                 break;
             default:
                 return "Operação inválida."
         }
-
+        return `Resultado da operação: ${x} ${operador} ${y} = ${result}.`
     }
 }
 

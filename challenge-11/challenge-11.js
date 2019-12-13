@@ -60,13 +60,18 @@
     console.log('De 0 a 10:');
     var number = 0;
     var numbers = []
-    while (number <= 20) {
-
-        if (number > 10)
+    for(var i = 0; i < 20; i++){
+        if(i > 10)
             break;
-        console.log(number)
-        numbers.push(number++)
+        numbers.push(i)
     }
+    // while (number <= 20) {
+
+    //     if (number > 10)
+    //         break;
+    //     console.log(number)
+    //     numbers.push(number++)
+    // }
     console.log(numbers)
     /*
     Faça outro loop de 0 a 20, que adicione a um array chamado `numbers` (já
@@ -77,14 +82,20 @@
     console.log('Pares de 0 a 20:');
     number = 0;
     numbers = []
-    while (number <= 20) {
-
-        if (number % 2 !== 0){
-            number++
+    for(var i = 0; i < 20; i++){
+        if (i % 2 !== 0){
             continue;
-        }
-        console.log(number)
-        numbers.push(number++)
+        } 
+        numbers.push(i)
     }
+    // while (number <= 20) {
+
+    //     if (number % 2 !== 0){
+    //         number++
+    //         continue;
+    //     }
+    //     console.log(number)
+    //     numbers.push(number++)
+    // }
     console.log(numbers)
 }())

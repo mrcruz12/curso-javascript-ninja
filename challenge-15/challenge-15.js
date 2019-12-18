@@ -35,9 +35,9 @@
       this.addAge = function addAge() {
         
         this.age += arguments[0]
-
+        return this
       }
-    return this
+    
 
   }
 
@@ -51,6 +51,9 @@
   var pessoa1 = new Person('Matheus', 'R da Cruz', 26);
   var pessoa2 = new Person('Ananda', 'N A da Cruz', 26);
   var pessoa3 = new Person('Marco Antonio', 'R da Cruz', 24);
+  console.log(pessoa1)
+  console.log(pessoa2)
+  console.log(pessoa3)
 
   /*
   Mostre no console o nome completo de cada pessoa.
@@ -75,10 +78,10 @@
   - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
   */
   console.log('\nNova idade das pessoas:');
-  pessoa1.addAge(1)
-  console.log(pessoa1.getFullName() +' agora tem '+ pessoa1.getAge() + ' anos.')
-  pessoa2.addAge(-1)
-  console.log(pessoa2.getFullName() +' agora tem '+ pessoa2.getAge() + ' anos.')
-  pessoa3.addAge(5)
-  console.log(pessoa3.getFullName() +' agora tem '+ pessoa3.getAge() + ' anos.')
+  //pessoa1.addAge(1)
+  console.log(pessoa1.getFullName() +' agora tem '+ pessoa1.addAge(1).getAge() + ' anos.')
+  //pessoa2.addAge(-1)
+  console.log(pessoa2.getFullName() +' agora tem '+ pessoa2.addAge(-1).getAge() + ' anos.')
+  //pessoa3.addAge(5)
+  console.log(pessoa3.getFullName() +' agora tem '+ pessoa3.addAge(5).getAge() + ' anos.')
 })()

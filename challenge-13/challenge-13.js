@@ -137,9 +137,10 @@
     - "Ceará não foi incluído :("
     */
     console.log('\nCeará está incluído em `brasil`?');
-    console.log(brasil.some((estado) => {
+    var some = brasil.some((estado) => {
         return estado === 'Ceará'
-    }))
+    })
+    console.log(some ? "Ceará está incluído!" : "Ceará não foi incluído!")
 
     /*
     Percorra o array `newBrasil` e crie um novo array que some 1 no ID de cada
@@ -147,9 +148,12 @@
     - "[ESTADO] pertence ao Brasil."
     Atribua o novo array a uma variável chamada `map`.
     */
-    var arr = newBrasil.filter((row) => {
+    var arr = newBrasil.map((row, index) => {
+        return {
+            id: row.id + 1,
+            estado: row.estado += ' pertence ao Brasil.'
+        }
 
-        return row.frase = `${row.estado} pertence ao Brasil.`
     })
 
     /*
